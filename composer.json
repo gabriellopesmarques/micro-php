@@ -1,0 +1,23 @@
+{
+    "name": "gabriellopesmarques/micro-php",
+    "description": "it's a micro framework php for academic purpose",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gabriel Lopes",
+            "email": "hello@gabriellopes.dev"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+             "Core\\": "core/",
+             "App\\Model\\": "app/model/",
+             "App\\Controller\\": "app/controller/",
+             "App\\Service\\": "app/service/"
+         }
+      },
+    "require": {
+        "php": ">=5.6"
+    }
+}
