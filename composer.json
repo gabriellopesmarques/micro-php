@@ -9,6 +9,9 @@
             "email": "hello@gabriellopes.dev"
         }
     ],
+    "scripts": {
+        "lint": "phpcs --standard=PSR2 . --ignore=vendor/"
+    },
     "autoload": {
         "psr-4": {
              "Core\\": "core/",
@@ -19,5 +22,8 @@
       },
     "require": {
         "php": ">=5.6"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "3.*"
     }
 }

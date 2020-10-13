@@ -2,7 +2,8 @@
 
 namespace Core;
 
-class Request {
+class Request
+{
 
     public $header;
     public $method;
@@ -41,21 +42,23 @@ class Request {
 
     public function setIp($ip = null)
     {
+        // @codingStandardsIgnoreStart
         $ip = '';
         if (!empty($_SERVER['HTTP_CLIENT_IP']))
             $ip = $_SERVER['HTTP_CLIENT_IP'];
-        else if(!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
+        else if (!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
             $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        else if(!empty($_SERVER['HTTP_X_FORWARDED']))
+        else if (!empty($_SERVER['HTTP_X_FORWARDED']))
             $ip = $_SERVER['HTTP_X_FORWARDED'];
-        else if(!empty($_SERVER['HTTP_FORWARDED_FOR']))
+        else if (!empty($_SERVER['HTTP_FORWARDED_FOR']))
             $ip = $_SERVER['HTTP_FORWARDED_FOR'];
-        else if(!empty($_SERVER['HTTP_FORWARDED']))
+        else if (!empty($_SERVER['HTTP_FORWARDED']))
             $ip = $_SERVER['HTTP_FORWARDED'];
-        else if(!empty($_SERVER['REMOTE_ADDR']))
+        else if (!empty($_SERVER['REMOTE_ADDR']))
             $ip = $_SERVER['REMOTE_ADDR'];
         else
             $ip = 'UNKNOWN';
+        // @codingStandardsIgnoreEnd
 
         return $this->ip = $ip;
     }

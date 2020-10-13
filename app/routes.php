@@ -8,6 +8,8 @@
 
 use App\Controller\ExampleController;
 
-$route->get('/', function(){ echo "hello world"; });
-$route->get('/controller-example', [ExampleController::class, "index"]);
+$route->get('/', function () {
+    echo "hello world";
+});
 
+$route->get('/controller-example', [ExampleController::class, "index"]);
